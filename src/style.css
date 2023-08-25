@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .search-input {
+    @apply w-60 mb-5 block;
+  }
+}
+
+@layer utilities {
+  .grayed-out-disabled {
+    @apply disabled:opacity-50;
+  }
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Make the container fill the entire viewport height */
+}
+
+.loading-spinner {
+  border: 4px solid rgb(255, 255, 255);
+  border-left: 4px solid rgb(96, 96, 96);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.font {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 4px;
+  
+}
+
+.custom-input::placeholder {
+  color: #ffffff; /* Ganti dengan warna yang Anda inginkan */
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+body{
+  background-color: black;
+}
